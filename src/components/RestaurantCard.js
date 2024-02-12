@@ -1,15 +1,17 @@
-const RestaurantCard = () => {
+const RestaurantCard = ({ restaurantInfo }) => {
   return (
     <div className="restaurant-card">
       <img
         className="restaurant-logo"
         alt="restaurant-logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/195876a3181ef63f76e45e3a7b49b585"
+        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${restaurantInfo.info.cloudinaryImageId}`}
       />
-      <h3>Meghana Foods</h3>
-      <h4>North Indian, Chinese</h4>
-      <h4>4.4 stars</h4>
-      <h4>38 minutes</h4>
+      <h3>{restaurantInfo.info.name}</h3>
+      <h4 className="restaurant-cuisines">
+        {restaurantInfo.info.cuisines.toString()}
+      </h4>
+      <h4>{restaurantInfo.info.avgRating} stars</h4>
+      <h4>{restaurantInfo.info.sla.slaString}</h4>
     </div>
   );
 };

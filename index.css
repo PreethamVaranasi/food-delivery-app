@@ -41,6 +41,17 @@
   margin-left: 10px;
 }
 
+.restaurants-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .restaurant-logo {
   width: 100%;
+  height: 250px;
+}
+
+.restaurant-cuisines {
+  word-break: break-all;
+  white-space: pre-wrap;
 }
