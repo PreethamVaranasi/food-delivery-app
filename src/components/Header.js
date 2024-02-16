@@ -13,16 +13,16 @@ const Header = () => {
       </div>
       <div className="flex items-center ">
         <ul className="flex px-4">
-          <li className="px-4">
+          <li className="px-4 font-bold  hover:text-red-500">
             <Link to="/"> Home</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-bold  hover:text-red-500">
             <Link to="/about"> About us</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-bold  hover:text-red-500">
             <Link to="/contact-us"> Contact Us</Link>
           </li>
-          <li className="px-4">Cart</li>
+          <li className="px-4 font-bold  hover:text-red-500">Cart</li>
         </ul>
       </div>
     </div>

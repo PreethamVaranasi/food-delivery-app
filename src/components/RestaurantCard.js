@@ -1,8 +1,8 @@
 const RestaurantCard = ({ restaurantInfo }) => {
   return (
-    <div className="p-2 m-4 w-52 hover:bg-gray-100 rounded-md">
+    <div className="p-2 m-4 w-52 hover:bg-white rounded-lg">
       <img
-        className="w-52 h-44 rounded-md"
+        className="w-52 h-44 rounded-lg"
         alt="restaurant-logo"
         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${restaurantInfo.info.cloudinaryImageId}`}
       />
