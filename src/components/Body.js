@@ -29,9 +29,10 @@ const Body = () => {
   if (!restaurantData.length > 0) return <h1>Loading....</h1>;
 
   return (
-    <div className="body">
-      <div className="search">
+    <div className="bg-slate-100">
+      <div className="ml-6">
         <input
+          className="border-2 mr-4"
           type="text"
           value={searchInput}
           onChange={(event) => {
@@ -45,7 +46,7 @@ const Body = () => {
           }}
         />
         <button
-          className="search-btn"
+          className="bg-red-500 text-white p-2 font"
           onClick={() => {
             const filtered = restaurantData.filter(
               (restaurant) => restaurant.info.avgRating > 4.2
@@ -56,7 +57,7 @@ const Body = () => {
           Search Top Rated Restaurants
         </button>
       </div>
-      <div className="restaurants-container">
+      <div className="flex flex-wrap">
         {filteredData.map((restaurantInfo) => (
           <Link
             key={restaurantInfo?.info?.id}
