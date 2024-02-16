@@ -4,6 +4,7 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import About from "./src/components/About";
 import ContactUs from "./src/components/ContactUs";
+import RestaurantMenuCard from "./src/components/RestaurantMenuCard";
 
 const AppLayout = () => {
   return (
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs />,
+      },
+      {
+        path: "/menu/:restaurantId",
+        element: <RestaurantMenuCard />,
       },
     ],
     errorElement: <div>Opps Something went wrong !!</div>,

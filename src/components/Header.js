@@ -12,13 +12,13 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>
-            <Link to={"/"}> Home</Link>
+            <Link to="/"> Home</Link>
           </li>
           <li>
-            <Link to={"/about"}> About us</Link>
+            <Link to="/about"> About us</Link>
           </li>
           <li>
-            <Link to={"/contact-us"}> Contact Us</Link>
+            <Link to="/contact-us"> Contact Us</Link>
           </li>
           <li>Cart</li>
         </ul>

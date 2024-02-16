@@ -8,7 +8,7 @@ const RestaurantCard = ({ restaurantInfo }) => {
       />
       <h3>{restaurantInfo.info.name}</h3>
       <h4 className="restaurant-cuisines">
-        {restaurantInfo.info.cuisines.toString()}
+        {restaurantInfo.info.cuisines.join(",")}
       </h4>
       <h4>{restaurantInfo.info.avgRating} stars</h4>
       <h4>{restaurantInfo.info.sla.slaString}</h4>
