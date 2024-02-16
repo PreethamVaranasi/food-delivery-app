@@ -46,7 +46,7 @@ const Body = () => {
           }}
         />
         <button
-          className="bg-red-500 text-white p-2 font"
+          className="bg-red-500 text-white p-2 rounded-md"
           onClick={() => {
             const filtered = restaurantData.filter(
               (restaurant) => restaurant.info.avgRating > 4.2
