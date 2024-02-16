@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import { GET_RESTAURANTS_API } from "../utilities/constants";
 
@@ -8,6 +8,8 @@ const Body = () => {
   const [filteredData, setFilteredData] = useState([]);
 
   const [searchInput, setSearchInput] = useState("");
+
+  const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
 
   const fetchData = async () => {
     const data = await fetch(GET_RESTAURANTS_API);
@@ -63,7 +65,11 @@ const Body = () => {
             key={restaurantInfo?.info?.id}
             to={"/menu/" + restaurantInfo?.info?.id}
           >
-            <RestaurantCard restaurantInfo={restaurantInfo} />
+            {restaurantInfo?.info?.promoted ? (
+              <PromotedRestaurantCard restaurantInfo={restaurantInfo} />
+            ) : (
+              <RestaurantCard restaurantInfo={restaurantInfo} />
+            )}
           </Link>
         ))}
       </div>
