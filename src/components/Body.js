@@ -31,7 +31,7 @@ const Body = () => {
   if (!restaurantData.length > 0) return <h1>Loading....</h1>;
 
   return (
-    <div className="bg-slate-100">
+    <div>
       <div className="ml-6">
         <input
           className="border-2 mr-4"

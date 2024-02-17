@@ -11,8 +11,7 @@ const useRestaurantMenuHook = (restaurantId) => {
 
     setRestaurantName(jsonData?.data?.cards[0]?.card?.card?.info?.name);
     setRestaurantMenu(
-      jsonData?.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card.card.itemCards
+      jsonData?.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards
     );
   };
 

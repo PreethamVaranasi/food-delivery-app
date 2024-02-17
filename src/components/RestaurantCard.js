@@ -1,10 +1,12 @@
+import { CND_MEDIA_URL } from "../utilities/constants";
+
 const RestaurantCard = ({ restaurantInfo }) => {
   return (
-    <div className="p-2 m-4 w-52 hover:bg-white rounded-lg">
+    <div className="p-2 m-4 w-52 bg-slate-100 hover:bg-white rounded-lg">
       <img
         className="w-52 h-44 rounded-lg"
         alt="restaurant-logo"
-        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${restaurantInfo.info.cloudinaryImageId}`}
+        src={CND_MEDIA_URL + restaurantInfo.info.cloudinaryImageId}
       />
       <h3 className="font-bold mt-2">{restaurantInfo.info.name}</h3>
       <h4 className="font-bold my-2">

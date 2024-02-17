@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="flex justify-between mx-4">
+    <div className="flex justify-between mx-4 border-b-4">
       <div className="logo-container">
         <Link to="/">
           <img
